@@ -1,16 +1,25 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
+  <h1>{{company.name}}</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+    {{company.description}}
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Opening hours:</h3>
+    </div>
+    <p>{{company.openingHours[0]}}</p>
+    <p>{{company.openingHours[1]}}</p>
+    </div>
+    <p><a class="btn btn-lg btn-success" ng-href="#">Abierto</a></p>
+    <p><a class="btn btn-lg btn-danger" ng-href="#">Cerrado</a></p>
+  </div>
 </div>
 
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
+  <h4>Activities</h4>
   <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+   {{company.activities}}
   </p>
 
 <div class="panel panel-info">
@@ -20,8 +29,7 @@
   <div id="map-canvas" style="height:400px; width:100%" class="panel-body"></div>
 </div>
 
-
-  <blockquote>
+<blockquote>
   <p>La mejor tienda de deportes de toda Sevilla.</p>
   <small>Miguel Espoinosa <cite title="Source Title">Source Title</cite></small>
 </blockquote>
