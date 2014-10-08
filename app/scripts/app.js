@@ -10,7 +10,8 @@
  */
 angular
   .module('frontendApp', [
-    'ngRoute'
+    'ngRoute',
+    'config'
   ])
   .config(function ($routeProvider) {
     $routeProvider

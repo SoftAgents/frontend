@@ -1,3 +1,12 @@
+<ul class="pagination">
+  <li class="disabled"><a href="#">«</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">»</a></li>
+</ul>
+
+
 <div class="jumbotron">
   <h1>{{company.name}}</h1>
   <p class="lead">
@@ -11,8 +20,7 @@
     <p>{{company.openingHours[0]}}</p>
     <p>{{company.openingHours[1]}}</p>
     </div>
-    <p><a class="btn btn-lg btn-success" ng-href="#">Abierto</a></p>
-    <p><a class="btn btn-lg btn-danger" ng-href="#">Cerrado</a></p>
+    <is-opened></is-opened>
   </div>
 </div>
 
@@ -21,7 +29,6 @@
   <p>
    {{company.activities}}
   </p>
-
 <div class="panel panel-info">
   <div class="panel-heading">
     <h3 class="panel-title">Maps</h3>
