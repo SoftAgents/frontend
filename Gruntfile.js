@@ -46,7 +46,7 @@ module.exports = function (grunt) {
         constants: {
           ENV: {
             name: 'development',
-            apiEndpoint: 'http://your-development.api.endpoint:3000'
+            apiEndpoint: 'http://private-705d2-poligonosindustriales.apiary-mock.com/company/1'
           }
         }
       },
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
         constants: {
           ENV: {
             name: 'production',
-            apiEndpoint: 'http://api.livesite.com'
+            apiEndpoint: 'http://private-705d2-poligonosindustriales.apiary-mock.com/company/1'
           }
         }
       }

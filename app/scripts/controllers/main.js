@@ -9,10 +9,15 @@
  * config dependency generated via grunt.
  */
 
-angular.module('frontendApp', ['config'])
-  .controller('MainCtrl', function ($scope, $http) {
-    var url = 'http://private-705d2-poligonosindustriales.apiary-mock.com/company/1';
-	  $http({method: 'GET', url: url}).
+var frontend = angular.module('frontendApp');
+
+frontend.controller('MainCtrl', ['$scope','$http','ENV',function ($scope, $http, ENV) {
+
+    //demo purposes
+    console.log('ENV information: ',ENV);
+
+    var url = ENV.apiEndpoint;
+    $http({method: 'GET', url: url}).
         success(function(data, status) {
           console.log('Retrieved detail for cia 1');
           $scope.status = status;
@@ -23,7 +28,8 @@ angular.module('frontendApp', ['config'])
           $scope.data = data || 'Request failed';
           $scope.status = status;
         });
-  }).directive('isOpened', function(){
+  }])
+frontend.directive('isOpened', function(){
       return{
         restrict: 'E',
         templateUrl: './views/alerts/opened-alert.html',
